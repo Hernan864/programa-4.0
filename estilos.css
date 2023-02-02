@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Open+Sans&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Open+Sans&family=Poppins&family=Roboto:wght@400;500;700&display=swap");
+:root {
+  --box-shadow: 0px 0px 15px -3px grey;
+  --font-family-primary: "Open Sans", sans-ser;
+  --font-family-primary-title: "Roboto", sans-serif;
+  --background-color-main: #e2c5d8;
+  --background-color-card: #ffffff78;
+}
+
+* {
+  margin: 0;
+}
+html {
+  min-height: 100%;
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  margin-bottom: 100px;
+  font-size: 16px;
+  font-family: var(--font-family-primary);
+}
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 100;
+}
+.header-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 100px 100px 50px;
+  grid-template-areas:
+    "image intro  intro"
+    "image intro intro"
+    "nav   nav   nav";
+}
+
+#image-profile {
+  grid-area: image;
+  place-self: center;
+}
+
+.about-me-img {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.intro-container {
+  grid-area: intro;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.about-me-title {
+  margin-bottom: 5px;
+  font-family: var(--font-family-primary-title);
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-left: 15px;
+  color: purple;
+}
+
+.about-me-paragrph {
+  text-align: justify;
+  padding: 15px;
+  color: gray;
+  font-weight: bold;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.nav-menu {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.menu-links {
+  text-decoration: none;
+}
+
+/* ----------SECTION CARD--------- */
+
+main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--background-color-main);
+  display: flex;
+  flex-direction: column;
+}
+main:first-child {
+  margin-top: 50px;
+}
+
+.section-card {
+  margin: 0 auto;
+  width: 80%;
+  min-height: 100vh;
+  padding-top: 250px;
+}
+
+.section-card:last-child {
+  margin-bottom: 50px;
+}
+
+.solapa {
+  position: relative;
+  top: 12px;
+  z-index: 1;
+  background-color: white;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -8px -8px 25px -14px white;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.solapa > a {
+  text-decoration: none;
+}
+
+.info {
+  display: flex;
+  height: 350px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  background-color: var(--background-color-card);
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  width: 50%;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.idiomas {
+  height: 50px;
+  display: flex;
+}
+
+.list-idiomas {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer {
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.title-footer {
+  margin: 0;
+}
+
+.icon-container {
+  width: 200px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: var(--background-color-main);
+    font-size: 12px;
+  }
+  .header-container {
+    width: 100vw;
+    height: 250px;
+    padding: 10px;
+    grid-template-areas:
+      "image   image   image"
+      "intro   intro   intro"
+      "nav     nav     nav";
+  }
+
+  .intro-container {
+    align-items: center;
+  }
+
+  .about-me-title {
+    margin-bottom: 0;
+    font-family: var(--font-family-primary-title);
+    font-size: 20px;
+    padding: 0;
+  }
+
+  .about-me-paragrph {
+    padding: 0 15px;
+  }
+
+  .section-card {
+    padding-top: 270px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header-container {
+    width: 100vw;
+    padding: 10px;
+    grid-template-rows: 100px 150px;
+    grid-template-areas:
+      "image   image   image"
+      "intro   intro   intro";
+  }
+
+  .about-me-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .intro-container {
+    padding: 10px;
+  }
+
+  .about-me-title {
+    margin-bottom: 0;
+    font-size: 20px;
+    padding: 0;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .section-card {
+    margin: 0;
+    margin-top: 0;
+    width: 100%;
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  section .info {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: scroll;
+    max-height: 0;
+    text-align: justify;
+    font-family: "Courier New", Courier, monospace;
+    background-color: var(--background-color-card);
+    box-shadow: none;
+    border-bottom: 1px solid lightgray;
+    transition: max-height 0.8s;
+  }
+
+  section a {
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    border-bottom: 1px solid white;
+  }
+
+  section:target .info {
+    max-height: 250px;
+    padding: 10px;
+  }
+
+  .solapa {
+    position: unset;
+    top: 0;
+    width: 100%;
+  }
+
+  .solapa > a {
+    color: purple;
+  }
+
+  .section-card:first-child {
+    margin-top: 40px;
+  }
+
+  .info-items {
+    width: 95%;
+    padding: 5px;
+  }
+
+  .experience {
+    justify-content: flex-start;
+  }
+
+  .experience-items {
+    margin: 5px 10px;
+    padding: 5px;
+  }
+}
